@@ -2,21 +2,26 @@
 <html lang="en" ng-app="myApp">
 <head>
 	<meta charset="utf-8">
-	<title>My AngularJS App</title>
+	<title>ACME Email AngularJS Message Processor&copy</title>
 	<link rel="stylesheet" href="css/app.css"/>
 	<link rel="stylesheet/less" type="text/css" href="css/style.less" />
 	<script src="js/less-1.5.0.js" type="text/javascript"></script>
 </head>
 <body>
+<header>
 	<ul class="menu">
 		<li><a href="#/view1">view1</a></li>
 		<li><a href="#/view2">view2</a></li>
 	</ul>
-
+</header>
+<article>
 	<div ng-view></div>
 
 	<div>Angular seed app: v<span app-version></span></div>
-
+</article>
+<footer>
+	<p>ACME Email AngularJS Message Processor&copy</p>
+</footer>
 	<!-- In production use:
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 	-->
