@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+		"name": "Robert Smith",
+        "msgtxt": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy.",
+		"todo": true
+    },
+    {
+        "id": 1,
+		"name": "Mary Poppins",
+        "msgtxt": "Whooa well done and congratulations on the birth of [babyname] on [birthdate].",
+		"todo": true
+    },
+    {
+        "id": 2,
+		"name": "Chris Nguyen",
+        "msgtxt": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy.",
+		"todo": true
+    },
+    {
+        "id": 3,
+		"name": "Jennifer Adamson",
+        "msgtxt": "Whooa well done and congratulations on the birth of [babyname] on [birthdate].",
+		"todo": true
+    },
+    {
+        "id": 4,
+		"name": "Matt Earle",
+        "msgtxt": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy.",
+		"todo": true
+    }
+]
