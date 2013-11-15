@@ -4,10 +4,32 @@ LESS is not SASS...
 
 */
 
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
 @black: #000;
 @white: #FFF;
 
 html {
-	color: @white;
-	background-color: @black;
+	color: @black;
+	background-color: @white;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+	padding: 0;
 }
