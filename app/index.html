@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="acmeMsgApp">
 <head>
 	<meta charset="utf-8">
 	<title>ACME Email AngularJS Message Processor&copy;</title>
@@ -17,15 +17,10 @@
 </header>
 <article>
 	<div ng-view></div>
-
-	<div>Angular seed app: v<span app-version></span></div>
 </article>
 <footer>
-	<p>ACME Email AngularJS Message Processor&copy;</p>
+	<p>ACME Email AngularJS Message Processor&copy; v<span app-version></span></p>
 </footer>
-	<!-- In production use:
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-	-->
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/angular/angular-route.js"></script>
 	<script src="js/app.js"></script>
