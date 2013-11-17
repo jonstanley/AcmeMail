@@ -10,9 +10,9 @@ angular.module('acmeMsgApp', [
   'acmeMsgAppControllers'
 ])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-  $routeProvider.when('/', {templateUrl: 'views/logon.html', controller: 'LogonCtrl'});
-  $routeProvider.when('/dashboard', {templateUrl: 'views/dashboard.html', controller: 'DashboardCtrl'});
-  $routeProvider.when('/message/:messageID', {templateUrl: 'views/message.html', controller: 'SingleMsgCtrl'});
+  $routeProvider.when('/', {templateUrl: '/views/logon.html', controller: 'LogonCtrl'});
+  $routeProvider.when('/dashboard', {templateUrl: '/views/dashboard.html', controller: 'DashboardCtrl'});
+  $routeProvider.when('/message/:messageID', {templateUrl: '/views/message.html', controller: 'SingleMsgCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});
   $locationProvider.html5Mode(true);
 }]);

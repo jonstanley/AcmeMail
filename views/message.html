@@ -1,7 +1,8 @@
 <div data-ng-controller="SingleMsgCtrl">
 <h1>Message</h1>
+<p>Dummy data</p>
 <dl>
-	<dt data-ng-repeat-start="message in messages | filter:{id:4} | filter:query | orderBy:orderProp">[{{message.id}}] {{message.name.first}} {{message.name.last}}</dt>
+	<dt data-ng-repeat-start="message in messages | filter:query | orderBy:orderProp">[{{message.id}}] {{message.name.first}} {{message.name.last}}</dt>
 	<dd data-ng-repeat-end><ul>
 		<li>{{message.msg.title}}</li>
 		<li>{{message.msg.body}}</li>
