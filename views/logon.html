@@ -1,0 +1,11 @@
+<div data-ng-controller="LogonCtrl">
+<h1>Welcome</h1>
+<form>
+	<fieldset data-ng-submit="login()">
+	<legend>Logon:</legend>
+	<label for="username">Username: <input type="text" id="username" data-ng-model="user.name" placeholder="hint: user" /></label>
+	<label for="password">Password: <input type="password" id="password" data-ng-model="user.password" placeholder="hint: pass" /></label>
+	<input type="submit" value="Login" data-ng-click="go('dashboard')" />
+	</fieldset>
+</form>
+</div>

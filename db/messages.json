@@ -1,32 +1,106 @@
 [
     {
         "id": 0,
-		"name": "Robert Smith",
-        "msgtxt": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy.",
+		"name": {
+			"first": "Robert",
+			"last":	"Smith"
+			},
+		"msg": {
+			"type": "birthday",
+			"title": "Birthday Wish",
+			"body": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy."
+			},
 		"todo": true
     },
     {
         "id": 1,
-		"name": "Mary Poppins",
-        "msgtxt": "Whooa well done and congratulations on the birth of [babyname] on [birthdate].",
+		"name": {
+			"first": "Mary",
+			"last":	"Poppins"
+			},
+		"msg": {
+			"type": "newbaby",
+			"title": "Congrats on the birth of your child",
+			"body": "Whooa well done and congratulations on the birth of [babyname] on [birthdate]."
+			},
 		"todo": true
     },
     {
         "id": 2,
-		"name": "Chris Nguyen",
-        "msgtxt": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy.",
+		"name": {
+			"first": "Chris",
+			"last":	"Nguyen"
+			},
+		"msg": {
+			"type": "birthday",
+			"title": "Birthday Wish",
+			"body": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy."
+			},
 		"todo": true
     },
     {
         "id": 3,
-		"name": "Jennifer Adamson",
-        "msgtxt": "Whooa well done and congratulations on the birth of [babyname] on [birthdate].",
+		"name": {
+			"first": "Jennifer",
+			"last":	"Adamson"
+			},
+		"msg": {
+			"type": "newbaby",
+			"title": "Congrats on the birth of your child",
+			"body": "Whooa well done and congratulations on the birth of [babyname] on [birthdate]."
+			},
 		"todo": true
     },
     {
         "id": 4,
-		"name": "Matt Earle",
-        "msgtxt": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy.",
+		"name": {
+			"first": "Matt",
+			"last":	"Earle"
+			},
+		"msg": {
+			"type": "birthday",
+			"title": "Birthday Wish",
+			"body": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy."
+			},
 		"todo": true
+    },
+    {
+        "id": 5,
+		"name": {
+			"first": "James",
+			"last":	"Bedford"
+			},
+		"msg": {
+			"type": "birthday",
+			"title": "Birthday Wish",
+			"body": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy."
+			},
+		"todo": false
+    },
+    {
+        "id": 6,
+		"name": {
+			"first": "Albert",
+			"last":	"Williams"
+			},
+		"msg": {
+			"type": "newbaby",
+			"title": "Congrats on the birth of your child",
+			"body": "Whooa well done and congratulations on the birth of [babyname] on [birthdate]."
+			},
+		"todo": false
+    },
+    {
+        "id": 7,
+		"name": {
+			"first": "Dominik",
+			"last":	"Elderberry"
+			},
+		"msg": {
+			"type": "birthday",
+			"title": "Birthday Wish",
+			"body": "Mate, Happy Birthday. To celebrate this once a year occasion we have picked the following gift: [gift]. Enjoy."
+			},
+		"todo": false
     }
 ]

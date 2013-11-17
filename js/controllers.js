@@ -1,11 +1,23 @@
 'use strict';
 
 /* Controllers */
+var acmeMsgAppControllers = angular.module('acmeMsgAppControllers', []);
 
-angular.module('acmeMsgApp.controllers', []).
-  controller('MyCtrl1', [function() {
+acmeMsgAppControllers.controller('LogonCtrl', function($scope, $location) {
+    $scope.go = function(path) {
+        $location.path('/'+path+'/');
+    };
+});
+acmeMsgAppControllers.controller('DashboardCtrl', function($scope, $http) {
+	$http.get('db/messages.json').success(function(data) {
+	$scope.messages = data;
+	});
+	$scope.orderProp = Array('-todo', 'name.last');
+});
 
-  }])
-  .controller('MyCtrl2', [function() {
-
-  }]);
+acmeMsgAppControllers.controller('SingleMsgCtrl', function($scope, $http) {
+	$http.get('db/messages.json').success(function(data) {
+	$scope.messages = data;
+	});
+	$scope.orderProp = 'id';
+});

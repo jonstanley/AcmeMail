@@ -1,0 +1,10 @@
+<div data-ng-controller="DashboardCtrl">
+<h1>Dashboard</h1>
+<p><label for="filter">Filter: <input type="search" id="filter" ng-model="query" /></label> | Messages todo: {{(messages | filter:{todo:true}).length}}</p>
+<div>
+	<figure data-type="{{message.msg.type}}" data-todo="{{message.todo}}" data-ng-repeat="message in messages | filter:query | orderBy:orderProp">
+		<a href="/message/{{message.id}}" data-ng-click="go('/message/{{message.id}}')">{{message.name.first}} {{message.name.last}}</a>
+		<figcaption><a href="/message/{{message.id}}" data-ng-click="go('/message/{{message.id}}')">{{message.msg.title}}</a></figcaption>
+	</figure>
+</div>
+</div>

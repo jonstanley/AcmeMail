@@ -1,36 +1,320 @@
 /*
-
-LESS is not SASS...
-
+	 ___________________________
+	/ MOOCSS is the best...     \
+	|     Have you mooed today? |
+	\ (c) 2013 Jonathan Stanley /
+	 ---------------------------
+			\   ^__^
+			 \  (oO)\_______
+				(__)\       )\/\
+				  U ||----w |
+					||     ||
+----------------------------------------------------
 */
 
+/* Setup some webfonts, everyone loves webfonts... */
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Droid Sans';
 	font-style: normal;
 	font-weight: 400;
-	src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+	src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
 }
 
 @font-face {
-	font-family: 'Open Sans';
+	font-family: 'Droid Sans';
 	font-style: normal;
 	font-weight: 700;
-	src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+	src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMQFhaRv2pGgT5Kf0An0s4MM.woff) format('woff');
 }
 
-/* LESS colours */
-@black: #000;
-@white: #FFF;
+@font-face {
+	font-family: 'Droid Sans Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format('woff');
+}
 
-html {
-	color: @black;
-	background-color: @white;
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 100;
+	src: local('Raleway Thin'), local('Raleway-Thin'), url(http://themes.googleusercontent.com/static/fonts/raleway/v6/RJMlAoFXXQEzZoMSUteGWD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Raleway'), url(http://themes.googleusercontent.com/static/fonts/raleway/v6/IczWvq5y_Cwwv_rBjOtT0w.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'iconmoon';
+	font-style: normal;
+	font-weight: 400;
+	src: local('icomoon'), url(/fonts/iconmoon.woff) format('woff');
+}
+
+/* LESS-style Mixin CSS-float clear-fix shenanigans */
+.clear-fix {
+	&::after {
+	content: "";
+	display: table;
+	clear: both;
+	}
+}
+
+.box-shadow (@shadows) {
+	-webkit-box-shadow: @shadows;
+	-moz-box-shadow: @shadows;
+	-o-box-shadow: @shadows;
+	box-shadow: @shadows;
+}
+
+.text-shadow (@shadows) {
+	-webkit-text-shadow: @shadows;
+	-moz-text-shadow: @shadows;
+	-o-text-shadow: @shadows;
+	text-shadow: @shadows;
+}
+
+.transform (@transform) {
+	-webkit-transform: @transform;
+	-moz-transform: @transform;
+	-o-transform: @transform;
+	transform: @transform;
+}
+
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+/* Start HTML style reset/unset */
+* {
 	margin: 0;
 	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
-	margin: 0;
-	padding: 0;
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* Start app HTML styles */
+html {
+	color: #000;
+	background-color: #FFF;
+}
+
+body {
+	font-family: "Droid Sans", sans-serif;
+	padding: 5%;
+		a {
+		color: #000;
+		text-decoration: none;
+		}
+		header h1 {
+		font-size: 1.25rem;
+		font-weight: bold;
+		}
+		article h1 {
+		font-family: "Raleway", sans-serif;
+		font-size: 6rem;
+		font-weight: 100;
+			&::after {
+			font-family: "icomoon";
+			font-size: 5rem;
+			padding: 0 0 0 1rem;
+			content: "";
+			}
+		}
+		footer p {
+		font-size: 0.825rem;
+		padding: 2rem 0 0;
+		text-align: right;
+		}
+}
+
+abbr, code {
+	font-family: "Droid Sans Mono", monospace;
+}
+
+ul.menu {
+	padding: 1rem 0;
+	&::before {
+		content: "[";
+	}
+	&::after {
+		content: "]";
+	}
+	&> li {
+		display: inline;
+	}
+	&> li:before {
+		content: "|";
+		padding-right: 0.3em;
+	}
+	&> li:nth-child(1):before {
+		content: "";
+		padding: 0;
+	}
+}
+
+input {
+	border: 1px solid #000;
+	& {
+	.box-shadow(inset 1px 1px 1px #CCC);
+	}
+	&:active, &:focus {
+	.box-shadow(~"0px 0px 2px #0F0, inset 1px 1px 1px #CCC");
+	}
+	&:invalid {
+	.box-shadow(~"0px 0px 2px #F00, inset 1px 1px 1px #CCC");
+	background-color: #FF0;
+	}
+}
+
+/* Logon view styling... */
+div[data-ng-controller="LogonCtrl"] {
+	text-align: center;
+	h1 {
+	text-align: left;
+		&::after {
+		content: "\e600";
+		}
+	}
+	form legend {
+	text-align: left; 
+	}
+	fieldset {
+	margin: 1rem 0 5rem;
+	}
+	legend {
+	display: none;
+	}
+	label {
+	display: block;
+	font-size: 1.25rem;
+	width: 100%;
+	padding: 2rem 0 0;
+	text-transform: uppercase;
+		input {
+			margin: 0 0 0 2rem;
+			padding: 0.2rem;
+		}
+	}
+	input[type="submit"] {
+	margin: 2rem 0 0;
+	padding: 0.25rem;
+	font-size: 1.75rem;
+	font-weight: bold;
+	cursor: pointer;
+	text-transform: uppercase;
+	}
+}
+
+/* Dashboard view styling... */
+div[data-ng-controller="DashboardCtrl"] {
+	h1 {
+		&::after {
+		content: "\e651";
+		}
+	}
+	p {
+		margin: 1rem 0 0;
+	}
+	figure {
+		display: block;
+		height: 16.75rem;
+		width: 16.75rem;
+		margin: 0.5rem;
+		float: left;
+		color: #FFF;
+		background-color: #666;
+		.transition(all 0.15s ease-in-out);
+		&:hover {
+			.transform(scale(1.2));
+			.transition(all 0.15s ease-in-out);
+			.box-shadow(0 0 1rem rgb(0, 0, 0))
+		}
+		&[data-type="birthday"] {
+			background-image: url("../img/msg-birthday.jpg");
+			background-size: cover;
+			}
+		&[data-type="newbaby"] {
+			background-image: url("../img/msg-newbaby.jpg");
+			background-size: cover;
+			}
+		&[data-todo="false"]  {
+			& a {
+				background-color: rgba(0, 0, 0, 0.7);
+				}
+			& figcaption a {
+				background-color: rgba(0, 0, 0, 0.95);
+				color: #FFF; 
+					&::after {
+					font-family: "icomoon";
+					font-size: 1.5rem;
+					padding: 0 0 0 0.5rem;
+					content: "\e6fb";
+					}
+				}
+			}
+		a {
+			color: #FFF;
+			text-decoration: none;
+			display: block;
+			font-size: 1.2rem;
+			padding: 0.5rem;
+			height: 9.25rem;
+			font-weight: bold;
+			letter-spacing: 0.125rem;
+			.text-shadow(0 0 0.25rem rgba(0, 0, 0, 0.8));
+		}
+		figcaption a {
+			height: 5.5rem;
+			font-family: "Raleway", sans-serif;
+			font-size: 1.8rem;
+			font-weight: 400;
+			text-align: right;
+			letter-spacing: 0;
+			color: #000;
+			background-color: rgba(255, 255, 255, 0.625);
+			.text-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+		}
+	}
+	div {
+	margin: 2rem 0;
+	.clear-fix
+	}
 }
